@@ -1,8 +1,11 @@
-import pyttsx3
-engine = pyttsx3.init()
+import os
 
-# For Mac, If you face error related to "pyobjc" when running the `init()` method :
-# Install 9.0.1 version of pyobjc : "pip install pyobjc>=9.0.1"
+# Specify the directory path
+path = "."
 
-engine.say("Hello My Lady")
-engine.runAndWait()
+# Get the contents of the directory
+contents = os.listdir(path)
+
+# Print each item
+for item in contents:
+    print(item)
